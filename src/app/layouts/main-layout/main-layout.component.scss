@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 137px;
+    padding: 16px 20px;
+
+    &__logo {
+        display: flex;
+        gap: 17px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__nav {
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 19px;
+                padding: 10px 20px;
+                border-radius: 8px;
+                transition: 150ms;
+
+                & span {
+                    font-feature-settings: 'clig'off, 'liga'off;
+                    font-family: 'Inter-Regular';
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: var(--color-text);
+                }
+
+                &:hover{
+                    background: var(--color-main);
+
+                }
+            }
+
+
+        }
+    }
+}

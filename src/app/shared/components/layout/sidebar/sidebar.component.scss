@@ -1,0 +1,12 @@
+.sidebar {
+
+    &__controls {
+        display: flex;
+        gap: 24px;
+
+        &-btn {
+            background: none;
+            border: none;
+        }
+    }
+}

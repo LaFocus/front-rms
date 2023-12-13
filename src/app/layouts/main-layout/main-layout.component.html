@@ -1,1 +1,20 @@
+<header class="header">
+    <div class="header__logo">
+        <img src="../../../assets/images/BeepLogo.png" alt="">
+        <img src="../../../assets/images/beepLogoText.svg" alt="">
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__nav__list">
+            <li *ngFor="let item of headerNav; index as i">
+                <a href="" class="header__nav__list-item">
+                    <img [src]="item.icon" alt="">
+                    <span>{{ item.title }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<app-sidebar />
 Main layout
