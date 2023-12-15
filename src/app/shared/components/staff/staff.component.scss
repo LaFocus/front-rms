@@ -1,0 +1,120 @@
+.staff {
+    width: 730px;
+    background: var(--color-bg-accent);
+    border-radius: 8px;
+
+    &__inner {
+        padding: 16px;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 37px;
+
+            &-backBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+
+            &-title {
+                color: var(--color-text);
+                font-family: 'Inter-SemiBold';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            &-btn {
+                border: none;
+                background: var(--color-main);
+                padding: 8px 44px;
+                border-radius: 8px;
+                color: var(--color-text);
+                font-family: 'Inter-Medium';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                transition: 150ms;
+                
+                &:hover {
+                    background: var(--color-main-hover);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 49px;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background: var(--color-bg-extra);
+            }
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            
+            &__item {
+                background: var(--color-bg-main);
+                padding: 12px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 8px;
+
+                &__left {
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+
+                    &__avtr {
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 8px;
+                        background: var(--color-bg-avtr);
+                    }
+
+                    &__name {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        & span {
+                            color: var(--color-text);
+                            font-family: 'Inter-Medium';
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+
+                            &:last-child {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                &__btns {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+
+                    & button {
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.points {
+    background: var(--color-bg-accent);
+    border-radius: 8px;
+
+    &__inner {
+        width: 740px;
+        padding: 16px;
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            &-backBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+
+            &-title {
+                color: var(--color-text);
+                font-family: 'Inter-SemiBold';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            &-btn {
+                background: var(--color-main);
+                padding: 8px 44px;
+                border-radius: 8px;
+                border: none;
+                color: var(--color-text);
+                font-family: 'Inter-Medium';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                transition: 150ms;
+
+                &:hover {
+                    background: var(--color-main-hover);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 49px;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background: var(--color-bg-extra);
+            }
+        }
+
+        &__cards {
+            margin-top: 37px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 16px;
+                background: var(--color-bg-main);
+                border-radius: 8px;
+
+                &-left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+
+                    & span:last-child {
+                        font-size: 12px;
+                    }
+                }
+
+                &-right {
+                    display: flex;
+                    gap: 12px;
+
+                    & button {
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+.deposit__inner {
+
+    &-switch {
+        margin: 20px 0;
+    }
+
+    &-title,
+    &-desc {
+        font-family: 'Inter-SemiBold';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &-desc {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        color: var(--color-);
+        margin-top: 8px;
+    }
+
+    &__cards {
+        margin-top: 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        margin-bottom: 17px;
+
+        &-item {
+            background: var(--color-bg-main);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & p {
+                font-family: 'Inter-Medium';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: var(--color-text);
+                flex-basis: 35%;
+
+            }
+
+            & span {
+                color: var(--color-text);
+                font-family: "inter-Bold";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                flex-basis: 50%;
+            }
+
+            & button {
+                background: var(--color-main);
+                border: none;
+                border-radius: 8px;
+                padding: 8px 24px;
+                transition: 150ms;
+                cursor: pointer;
+                
+                &:hover {
+                    background: var(--color-main-hover);
+                }
+            }
+
+            &:first-child {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+
+            &:last-child {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+
+            }
+        }
+    }
+
+    &__points {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &__item {
+            background: var(--color-bg-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 26px 16px;
+            border-radius: 8px;
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                flex-basis: 29%;
+
+                &-name {
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                &-addr {
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+
+            &-center,
+            &-right {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                flex-basis: 29%;
+
+                &-title {
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                &-sum {
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+
+            &-input {
+                padding: 17px 16px;
+                border-radius: 8px;
+                border: 1px solid var(--color-border-main);
+                flex-basis: 206px;
+                outline: none;
+                color: var(--color-text);
+                font-family: 'Inter-Medium';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+
+                &::placeholder {
+                    color: var(--color-placeholders);
+                    font-family: 'Inter-Medium';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+
+            &-btns {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-left: 26px;
+            }
+
+            & button {
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                
+            }
+        }
+    }
+}

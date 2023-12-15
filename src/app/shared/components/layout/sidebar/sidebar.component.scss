@@ -1,12 +1,113 @@
 .sidebar {
+    padding: 17px 20px;
 
     &__controls {
         display: flex;
         gap: 24px;
+        margin-bottom: 34px;
 
         &-btn {
             background: none;
             border: none;
+            color: var(--color-text-accent);
+
+            & button {
+                display: flex;
+                align-items: center;
+            }
+
+            &-exit {
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+
+                & img:last-child{
+                   transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    &__support {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 18px;
+
+        &-title {
+            font-family: 'Inter-SemiBold';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--color-text);
+        }
+
+
+        &__item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            &-spans {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                & span {
+                    font-family: 'Inter-Medium';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    color: var(--color-text-accent);
+
+                    &:last-child {
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        color: var(--color-text);
+                    }
+                }
+            }
+
+            &:last-child {
+
+                &-img:last-child {
+                    width: 500px;
+                    height: 500px;
+                    background: var(--color-text-accent);
+                }
+
+            }
+        }
+
+        &::before {
+            content: "";
+            height: 2px;
+            width: 311px;
+            background: #E0E4E8;
+            margin: 18px 0;
+        }
+
+    }
+
+    &__socials {
+
+        &-title {
+            font-family: 'Inter-SemiBold';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--color-text);
+            margin-bottom: 16px;
+        }
+
+        &__list {
+            display: flex;
+            gap: 8px;
         }
     }
 }

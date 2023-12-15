@@ -1,0 +1,66 @@
+.deposit {
+    background: var(--color-bg-accent);
+    border-radius: 8px;
+    padding: 16px;
+    width: 740px;
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 38px;
+
+        &-backBtn {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        & img {
+            cursor: pointer;
+        }
+
+        & h2 {
+            text-align: center;
+            width: 100%;
+            font-family: 'Inter-SemiBold';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: var(--color-bg-extra);
+        }
+    }
+
+    &__switch {
+        padding: 12px 2px;
+        border-radius: 32px;
+        background: var(--color-bg-main);
+        width: max-content;
+        align-self: center;
+        margin-bottom: 18px;
+
+        & a {
+            color: var(--color-text);
+            font-family: 'Inter-Bold';
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding: 10px 80px;
+            background: var(--color-main);
+            border-radius: 32px;
+        }
+    }
+}

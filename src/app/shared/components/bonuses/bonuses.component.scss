@@ -1,0 +1,118 @@
+.bonuses {
+    background: var(--color-bg-accent);
+    border-radius: 8px;
+    padding: 16px;
+    width: 740px;
+    height: 100vh;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 38px;
+
+        &-backBtn {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        & img {
+            cursor: pointer;
+        }
+
+        & h2 {
+            text-align: center;
+            width: 100%;
+            font-family: 'Inter-SemiBold';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: var(--color-bg-extra);
+        }
+    }
+
+    &__inner {
+
+        &-title {
+            font-family: 'Inter-SemiBold';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 17px;
+
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+
+            &-item,
+            &-headers {
+                background: var(--color-bg-main);
+                padding: 15px 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-sum {
+                    font-family: 'Inter-Bold';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    flex-basis: 23%;
+                }
+
+                &-service {
+                    flex-basis: 38%;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    color: var(--color-text);
+                    font-family: 'Inter-Regular';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                &-date {
+                    color: var(--color-text);
+                    font-family: 'Inter-Regular';
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+            &-headers {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+    
+                &-sum {
+                    font-family: 'Inter-Regular';
+                    font-weight: 400;
+                }
+            }
+
+            &-item:last-child {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+        }
+
+    }
+}
