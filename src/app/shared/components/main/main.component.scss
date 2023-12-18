@@ -335,18 +335,21 @@
       &__right {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 8px;
+        gap: 8px;
+
+        @media screen and (max-width: 1366px) {
+          grid-template-columns: 1fr 1fr;
+        }
 
         &-card a{
           cursor: pointer;
           background: var(--color-bg-main);
           border-radius: 8px;
-          width: 104px;
-          height: 104px;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
+          padding: 12px 0;
 
           & span {
             font-family: 'Inter-Medium';

@@ -28,16 +28,20 @@ import { NgIf } from "@angular/common";
   ],
 })
 export class DepositComponent implements OnInit, OnDestroy {
-  constructor(private route: ActivatedRoute) {}
+  route = inject(ActivatedRoute)
+  router = inject(Router);
 
   activeTab$ = this.route.queryParams.pipe(map((item) => item["overview"]));
   activeTab: string | undefined;
   private subscription!: Subscription;
-  router = inject(Router)
+
   ngOnInit() {
     const snapshot: ActivatedRouteSnapshot = this.route.snapshot;
+    
     this.activeTab = snapshot.queryParams["overview"] || "main";
-
+    this.subscription = this.route.queryParams.subscribe((params) => {
+      this.activeTab = params["overview"];
+    });
     this.router.navigate([`/deposit`], {
       queryParams: { overview: "main" },
     });

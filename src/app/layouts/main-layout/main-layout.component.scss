@@ -39,6 +39,10 @@
           font-weight: 400;
           line-height: normal;
           color: var(--color-text);
+          
+          @media screen and (max-width: 1310px) {
+            font-size: 14px;
+          }
         }
 
         & img {

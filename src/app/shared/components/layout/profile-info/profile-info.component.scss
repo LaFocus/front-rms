@@ -2,6 +2,7 @@
     background: var(--color-bg-accent);
     padding: 16px;
     border-radius: 8px;
+    width: 311px;
 
     &__user {
         display: flex;
@@ -47,7 +48,7 @@
         &-sum {
             color: var(--color-text);
             font-family: 'Inter-Bold';
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
