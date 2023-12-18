@@ -1,0 +1,58 @@
+<div class="staffModal" *ngIf="isModalActive">
+    <div class="staffModal__inner" [style.display]="isNextActive ? 'none' : 'flex'">
+        <h4 class="staffModal__inner-title">Добавление сотрудника</h4>
+        <div class="staffModal__inner-input">
+            <span>Имя</span>
+            <input type="text">
+        </div>
+        <div class="staffModal__inner-input">
+            <span>Фамилия</span>
+            <input type="text">
+        </div>
+        <div class="staffModal__inner-input">
+            <span>Номер телефона</span>
+            <div class="staffModal__inner-input-phone">
+                <p>+998</p>
+                <input type="text">
+                <button><img src="../../../../../assets/images/cross.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="staffModal__inner__btns">
+            <button (click)="closeModal()">Отмена</button>
+            <button (click)="isNextActive = true">Далее</button>
+        </div>
+    </div>
+    <div class="staffModal__points" *ngIf="isNextActive">
+        <h3>Укажите, в каких торговых точках будет работать сотрудник</h3>
+
+        <div class="staffModal__points__switchers">
+            <div class="staffModal__points__switchers__item">
+                <span>Торговая точка 1</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="staffModal__points__switchers__item">
+                <span>Торговая точка 1</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="staffModal__points__switchers__item">
+                <span>Торговая точка 1</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="staffModal__inner__btns">
+                <button (click)="isNextActive = false">Отмена</button>
+                <button>Сохранить</button>
+            </div>
+        </div>
+    </div>
+    <button class="staffModal-btn" (click)="closeModal()"><img src="../../../../../assets/images/closeBtn.svg" alt=""></button>
+</div>

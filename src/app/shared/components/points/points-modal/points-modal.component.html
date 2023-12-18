@@ -1,0 +1,58 @@
+<div class="pointsModal" *ngIf="isModalActive">
+    <div class="pointsModal__inner" [style.display]="isNextActive ? 'none' : 'flex'">
+        <h4 class="pointsModal__inner-title">Добавление торговой точки</h4>
+        <div class="pointsModal__inner-input">
+            <span>Название</span>
+            <input type="text">
+        </div>
+        <div class="pointsModal__inner-input">
+            <span>Адрес</span>
+            <input type="text">
+        </div>
+        <div class="pointsModal__inner-input">
+            <span>Рабочие часы</span>
+            <div class="pointsModal__inner-input-time">
+                <input type="text" value="11:00">
+                <div class="pointsModal__inner-input-time-pipe"></div>
+                <input type="text" value="21:00">
+            </div>
+        </div>
+        <div class="pointsModal__inner__btns">
+            <button (click)="closeModal()">Отмена</button>
+            <button (click)="isNextActive = true">Далее</button>
+        </div>
+    </div>
+    <div class="pointsModal__way" *ngIf="isNextActive">
+        <h3>Способы оплаты в торговой точке</h3>
+
+        <div class="pointsModal__way__switchers">
+            <div class="pointsModal__way__switchers__item">
+                <span>Наличные</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="pointsModal__way__switchers__item">
+                <span>Uzcard/Humo</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="pointsModal__way__switchers__item">
+                <span>Перечисление</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="pointsModal__inner__btns">
+                <button (click)="isNextActive = false">Отмена</button>
+                <button>Сохранить</button>
+            </div>
+        </div>
+    </div>
+    <button class="pointsModal-btn" (click)="closeModal()"><img src="../../../../../assets/images/closeBtn.svg" alt=""></button>
+</div>

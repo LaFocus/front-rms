@@ -2,14 +2,23 @@
     background: var(--color-bg-accent);
     border-radius: 8px;
     padding: 16px;
-    width: 740px;
-    height: 100vh;
+    height: 100%;
+    margin-top: 82px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__inner {
+        max-width: 690px;
+        width: 100%;
+    }
 
     &__top {
         display: flex;
         justify-content: space-between;
         position: relative;
         margin-bottom: 38px;
+        width: 100%;
 
         &-backBtn {
             border: none;
@@ -74,6 +83,7 @@
                     font-weight: 700;
                     line-height: normal;
                     flex-basis: 23%;
+                    color: var(--color-text);
                 }
 
                 &-service {

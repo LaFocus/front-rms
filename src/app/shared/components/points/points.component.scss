@@ -1,9 +1,13 @@
 .points {
     background: var(--color-bg-accent);
     border-radius: 8px;
+    height: 100%;
+    margin-top: 82px;
 
     &__inner {
-        width: 740px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         padding: 16px;
 
         &__top {
@@ -11,6 +15,7 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            width: 100%;
 
             &-backBtn {
                 border: none;
@@ -61,6 +66,8 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            max-width: 740px;
+            width: 100%;
 
             &__item {
                 display: flex;
@@ -93,9 +100,23 @@
                     & button {
                         background: none;
                         border: none;
+                        cursor: pointer;
                     }
                 }
             }
         }
+    }
+
+    &__modal {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: #00000050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

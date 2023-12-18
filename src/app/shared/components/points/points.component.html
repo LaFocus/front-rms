@@ -9,7 +9,7 @@
             <div class="points__inner__top-title">
                 Торговые точки
             </div>
-            <button class="points__inner__top-btn">Добавить</button>
+            <button class="points__inner__top-btn" (click)="isModalActive = true">Добавить</button>
         </div>
         <div class="points__inner__cards">
             <div class="points__inner__cards__item">
@@ -43,5 +43,9 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="points__modal" *ngIf="isModalActive">
+        <points-modal (buttonClick)="isModalActive = false"></points-modal>
     </div>
 </div>

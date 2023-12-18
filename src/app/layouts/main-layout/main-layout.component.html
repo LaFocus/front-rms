@@ -7,7 +7,7 @@
   <nav class="header__nav">
     <ul class="header__nav__list">
       <li *ngFor="let item of headerNav">
-        <a href="" class="header__nav__list-item" [href]="item.path">
+        <a href="" class="header__nav__list-item" [routerLink]="item.path" routerLinkActive="active" >
           <img [src]="item.icon" alt="">
           <span>{{ item.title }}</span>
         </a>
@@ -19,5 +19,7 @@
 <main class="mainWrapper">
   <app-sidebar></app-sidebar>
   <router-outlet class="mainWrapper-routes"></router-outlet>
-  <profile-info></profile-info>
+  <aside class="mainWrapper__aside">
+    <profile-info></profile-info>
+  </aside>
 </main>

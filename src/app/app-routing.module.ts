@@ -23,22 +23,6 @@ const routes: Routes = [
           import("./shared/components/deposit/deposit.component").then(
             (m) => m.DepositComponent
           ),
-        children: [
-          {
-            path: 'deposit/history',
-            loadComponent: () =>
-              import("./shared/components/deposit/deposit-history/deposit-history.component").then(
-                (m) => m.DepositHistory
-              ),
-          },
-          {
-            path: 'deposit/main',
-            loadComponent: () =>
-              import("./shared/components/deposit/deposit-main/deposit-main.component").then(
-                (m) => m.DepositMainComponent
-              ),
-          },
-        ],
       },
       {
         path: "bonuses",
@@ -60,6 +44,34 @@ const routes: Routes = [
           import("./shared/components/staff/staff.component").then(
             (m) => m.StaffComponent
           ),
+      },
+      {
+        path: "",
+        redirectTo: "main",
+        pathMatch: "full",
+      },
+      {
+        path: "deposit/:overview",
+        loadComponent: () =>
+          import("./shared/components/deposit/deposit-main/deposit-main.component").then(
+            (m) => m.DepositMainComponent
+          ),
+        children: [
+          {
+            path: "main",
+            loadComponent: () =>
+              import(
+                "./shared/components/deposit/deposit-main/deposit-main.component"
+              ).then((m) => m.DepositMainComponent),
+          },
+          {
+            path: "history",
+            loadComponent: () =>
+              import(
+                "./shared/components/deposit/deposit-history/deposit-history.component"
+              ).then((m) => m.DepositHistory),
+          },
+        ],
       },
     ],
   },

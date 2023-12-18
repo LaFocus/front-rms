@@ -1,6 +1,5 @@
-.profileInfo {
+.profile {
     background: var(--color-bg-accent);
-    width: max-content;
     padding: 16px;
     border-radius: 8px;
 
@@ -62,12 +61,14 @@
             gap: 15px;
 
             & button {
+                cursor: pointer;
                 border: none;
                 background: none;
             }
         }
 
     }
+
     &__container {
         display: flex;
         gap: 15px;

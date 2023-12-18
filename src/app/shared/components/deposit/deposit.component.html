@@ -1,19 +1,25 @@
 <div class="deposit">
     <div class="deposit__top">
         <button class="deposit__top-backBtn">
-            <a href="/">
+            <a href="">
                 <img src="../../../../assets/images/arrow-left.svg" alt="">
             </a>
         </button>
         <h2>Финансы</h2>
     </div>
     <div class="deposit__switch">
-        <a href="/deposit/main">Управление</a>
-        <a href="/deposit/history">История</a>
+        <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'main'}" routerLinkActive="active">
+            Управление
+        </a>
+        <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'history'}" routerLinkActive="active">
+            История
+        </a>
     </div>
     <div class="router-container">
         <router-outlet></router-outlet>
     </div>
-    <deposit-main></deposit-main>
-
+    <div class="deposit__container">
+        <deposit-main *ngIf="activeTab === 'main'"></deposit-main>
+        <deposit-history *ngIf="activeTab === 'history'"></deposit-history>
+    </div>
 </div>
