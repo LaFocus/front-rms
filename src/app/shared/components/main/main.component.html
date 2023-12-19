@@ -75,10 +75,10 @@
         <h2 class="main__category-title">Выберите категорию</h2>
         <div class="main__category__inner">
           <div class="main__category__inner__left">
-            <a href="#" class="main__category__inner__left-card">
-              <div class="main__category__inner__left-card-left">
-                <img src="../../../assets/images/phone.svg" alt="" />
-                <span>Мобильная связь</span>
+            <a href="#" class="main__category__inner__left-card" *ngFor="let item of categories">
+              <div class="main__category__inner__left-card-left" >
+                <img [src]="item.icon" alt="" />
+                <span>{{ item.title }}</span>
               </div>
               <img src="../../../assets/images/package_arrow.svg" alt="" />
             </a>

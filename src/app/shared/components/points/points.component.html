@@ -1,4 +1,4 @@
-<div class="points">
+<div class="points" (click)="isModalActive = false">
     <div class="points__inner">
         <div class="points__inner__top">
             <button class="points__inner__top-backBtn">
@@ -9,7 +9,7 @@
             <div class="points__inner__top-title">
                 Торговые точки
             </div>
-            <button class="points__inner__top-btn" (click)="isModalActive = true">Добавить</button>
+            <button class="points__inner__top-btn" (click)="isModalActive = true" (click)="$event.stopPropagation()">Добавить</button>
         </div>
         <div class="points__inner__cards">
             <div class="points__inner__cards__item">
@@ -18,34 +18,14 @@
                     <span>Абдулла Кадыри 1A</span>
                 </div>
                 <div class="points__inner__cards__item-right">
-                    <button><img src="../../../../assets/images/trash.svg" alt=""></button>
-                    <button><img src="../../../../assets/images/pencil.svg" alt=""></button>
-                </div>
-            </div>
-            <div class="points__inner__cards__item">
-                <div class="points__inner__cards__item-left">
-                    <span>Торговая точка 1</span>
-                    <span>Абдулла Кадыри 1A</span>
-                </div>
-                <div class="points__inner__cards__item-right">
-                    <button><img src="../../../../assets/images/trash.svg" alt=""></button>
-                    <button><img src="../../../../assets/images/pencil.svg" alt=""></button>
-                </div>
-            </div>
-            <div class="points__inner__cards__item">
-                <div class="points__inner__cards__item-left">
-                    <span>Торговая точка 1</span>
-                    <span>Абдулла Кадыри 1A</span>
-                </div>
-                <div class="points__inner__cards__item-right">
-                    <button><img src="../../../../assets/images/trash.svg" alt=""></button>
-                    <button><img src="../../../../assets/images/pencil.svg" alt=""></button>
+                    <button><img src="../../../../assets/images/trash.svg" alt="" (click)="$event.stopPropagation()"></button>
+                    <button><img src="../../../../assets/images/pencil.svg" alt="" (click)="$event.stopPropagation()"></button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="points__modal" *ngIf="isModalActive">
-        <points-modal (buttonClick)="isModalActive = false"></points-modal>
+        <points-modal (buttonClick)="isModalActive = false" (click)="$event.stopPropagation()"></points-modal>
     </div>
 </div>

@@ -335,7 +335,9 @@
       &__right {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto, 1fr);
         gap: 8px;
+        align-self: flex-start;
 
         @media screen and (max-width: 1366px) {
           grid-template-columns: 1fr 1fr;

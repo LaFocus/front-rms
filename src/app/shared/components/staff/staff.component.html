@@ -1,4 +1,4 @@
-<div class="staff">
+<div class="staff" (click)="isModalActive = false">
     <div class="staff__inner">
         <div class="staff__inner__top">
             <button class="staff__inner__top-backBtn">
@@ -9,7 +9,7 @@
             <div class="staff__inner__top-title">
                 Сотрудники
             </div>
-            <button class="staff__inner__top-btn" (click)="isModalActive = true">
+            <button class="staff__inner__top-btn" (click)="isModalActive = true; $event.stopPropagation()">
                 Добавить
             </button>
         </div>
@@ -26,8 +26,8 @@
 
                 </div>
                 <div class="staff__inner__cards__item__btns">
-                    <button><img src="../../../../assets/images/trash.svg" alt=""></button>
-                    <button><img src="../../../../assets/images/pencil.svg" alt=""></button>
+                    <button><img src="../../../../assets/images/trash.svg" alt="" (click)="$event.stopPropagation()"></button>
+                    <button><img src="../../../../assets/images/pencil.svg" alt="" (click)="$event.stopPropagation()"></button>
                 </div>
             </div>
             <div class="staff__inner__cards__item">
@@ -46,8 +46,8 @@
                     <button><img src="../../../../assets/images/pencil.svg" alt=""></button>
                 </div>
             </div>
-            <div class="modal" *ngIf="isModalActive">
-                <staff-modal (buttonClick)="isModalActive = false"></staff-modal>
+            <div class="modal" *ngIf="isModalActive" >
+                <staff-modal (buttonClick)="isModalActive = false" (click)="$event.stopPropagation()"></staff-modal>
             </div>
         </div>
     </div>
