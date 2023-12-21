@@ -18,6 +18,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: "main/payment",
+        loadComponent: () =>
+          import("./shared/components/main/main-payment/main-payment.component").then(
+            (m) => m.MainPaymentComponent
+          ),
+      },
+      {
         path: "deposit",
         loadComponent: () =>
           import("./shared/components/deposit/deposit.component").then(

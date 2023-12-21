@@ -1,9 +1,5 @@
 <main class="main">
-
-  <!-- <app-sidebar /> -->
-
   <div class="main__inner">
-
     <div class="main__pay">
       <button class="main__pay-backBtn">
         <a href="/">
@@ -34,7 +30,9 @@
               <div class="main__phonePay__number__bottom-checkbox-circle"></div>
               <span>Мой номер</span>
             </button>
-            <button class="main__phonePay__number__bottom-btn">Оплатить</button>
+            <button class="main__phonePay__number__bottom-btn">
+              <a routerLink="payment">Оплатить</a>
+            </button>
           </div>
         </div>
       </div>
@@ -59,7 +57,7 @@
               <span>Ucell</span>
             </a>
           </div>
-          
+
         </div>
       </div>
       <div class="main__plans">
@@ -76,7 +74,7 @@
         <div class="main__category__inner">
           <div class="main__category__inner__left">
             <a href="#" class="main__category__inner__left-card" *ngFor="let item of categories">
-              <div class="main__category__inner__left-card-left" >
+              <div class="main__category__inner__left-card-left">
                 <img [src]="item.icon" alt="" />
                 <span>{{ item.title }}</span>
               </div>
@@ -86,35 +84,35 @@
           <div class="main__category__inner__right">
             <div class="main__category__inner__right-card">
               <a href="#">
-              <img src="../../../assets/images/ucell.png" alt="" />
-              <span>Ucell</span>
-            </a>
+                <img src="../../../assets/images/ucell.png" alt="" />
+                <span>Ucell</span>
+              </a>
             </div>
             <div class="main__category__inner__right-card">
               <a href="#">
-              <img src="../../../assets/images/ucell.png" alt="" />
-              <span>Ucell</span>
-            </a>
+                <img src="../../../assets/images/ucell.png" alt="" />
+                <span>Ucell</span>
+              </a>
             </div>
             <div class="main__category__inner__right-card">
               <a href="#">
-              <img src="../../../assets/images/ucell.png" alt="" />
-              <span>Ucell</span>
-            </a>
+                <img src="../../../assets/images/ucell.png" alt="" />
+                <span>Ucell</span>
+              </a>
             </div>
             <div class="main__category__inner__right-card">
               <a href="#">
-              <img src="../../../assets/images/ucell.png" alt="" />
-              <span>Ucell</span>
-            </a>
+                <img src="../../../assets/images/ucell.png" alt="" />
+                <span>Ucell</span>
+              </a>
             </div>
             <div class="main__category__inner__right-card">
               <a href="#">
-              <img src="../../../assets/images/ucell.png" alt="" />
-              <span>Ucell</span>
-            </a>
+                <img src="../../../assets/images/ucell.png" alt="" />
+                <span>Ucell</span>
+              </a>
             </div>
-            
+
           </div>
         </div>
       </div>

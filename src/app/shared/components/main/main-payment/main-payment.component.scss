@@ -1,0 +1,231 @@
+.mainPayment {
+    background: var(--color-bg-accent);
+    border-radius: 8px;
+    height: 100%;
+    margin-top: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    padding: 16px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+
+        &-title {
+            color: var(--color-text);
+            font-family: 'Inter-SemiBold';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 50%;
+
+            &-backBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 49px;
+            left: 50%;
+            height: 2px;
+            width: calc(100% - 40px);
+            transform: translateX(-50%);
+            background: var(--color-after);
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        padding: 16px;
+        max-width: 690px;
+        width: 100%;
+
+
+        &-logo {
+            width: 130px;
+            height: 130px;
+            background: var(--color-bg-main);
+            border-radius: 8px;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+        }
+
+
+        &__input {
+            width: 100%;
+
+            &-title {
+                color: var(--color-text);
+                font-family: 'Inter-Medium';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin-left: 14px;
+            }
+
+            &__form {
+                display: flex;
+                border: 1px solid var(--color-border-main);
+                border-radius: 8px;
+                background: var(--color-bg-main);
+                padding-right: 16px;
+                margin-bottom: 4px;
+
+                & span {
+                    padding: 15px 12px;
+                    border-top-left-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    background: var(--color-bg-accent);
+                    color: var(--color-text-accent);
+                    font-family: 'Inter-Medium';
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                & input {
+                    background: var(--color-input);
+                    outline: none;
+                    border: none;
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    padding-left: 16px;
+                    width: 100%;
+                }
+
+                & button {
+                    background: none;
+                    border: none;
+                }
+            }
+
+            &__btns {
+                margin-top: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 9px;
+
+                & button {
+                    padding: 8px 12px;
+                    background: var(--color-bg-main);
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    border-radius: 32px;
+                    border: none;
+                    transition: 150ms;
+
+                    &:hover {
+                        background: var(--color-main);
+                    }
+                }
+            }
+        }
+
+
+        &__sum {
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+            width: 100%;
+
+            & span {
+                color: var(--color-text);
+                font-family: 'Inter-Medium';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin-left: 16px;
+                margin-bottom: 4px;
+            }
+
+            & input {
+                padding: 16px;
+                color: var(--color-text);
+                font-family: 'Inter-medium';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                border-radius: 8px;
+                background: var(--color-bg-main);
+                outline: none;
+                border: none;
+                width: 100%;
+            }
+
+            &__btns {
+                margin-top: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 9px;
+
+                & button {
+                    padding: 8px 12px;
+                    background: var(--color-bg-main);
+                    color: var(--color-text);
+                    font-family: 'Inter-Medium';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    border-radius: 32px;
+                    border: none;
+                    transition: 150ms;
+
+                    &:hover {
+                        background: var(--color-main);
+                    }
+                }
+            }
+        }
+
+        &-continue {
+            padding: 15px 175px;
+            border-radius: 8px;
+            background: var(--color-main);
+            color: var(--colot-text);
+            font-family: 'Inter-SemiBold';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            border: none;
+            margin-top: 24px;
+            transition: 150ms;
+            align-self: center;
+
+            &:hover {
+                background: var(--color-main-hover);
+            }
+        }
+    }
+}

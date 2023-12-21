@@ -20,6 +20,7 @@ import { ProfileInfo } from "../../shared/components/layout/profile-info/profile
 })
 export class AppMainLayout implements OnInit {
   constructor() {}
+
   headerNav: any[] = [
     {
       title: "Оплаты",
@@ -47,5 +48,6 @@ export class AppMainLayout implements OnInit {
       icon: "../../../assets/images/Staff.svg",
     },
   ];
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

@@ -1,0 +1,154 @@
+html.dark {
+
+    img {
+        filter: invert(1) brightness(11);
+    }
+
+    .active {
+        color: #333 !important;
+    }
+
+    .header__logo {
+        img:first-child {
+            filter: invert(0);
+        }
+    }
+
+    .header__nav__list-item {
+        img {
+            filter: invert(1) brightness(11);
+        }
+
+        &.active {
+            span {
+                color: #333;
+            }
+
+            img {
+                filter: invert(0);
+            }
+
+        }
+    }
+
+    .profile__info-btns {
+        img {
+            filter: invert(1);
+        }
+    }
+
+    .profile__user img {
+        filter: invert(1);
+    }
+
+    [class$="-backBtn"] {
+        img {
+            filter: invert(1) brightness(11);
+        }
+    }
+
+    [class$="__input"],
+    .mainPayment__inner__input__form {
+        border: 1px solid #717273;
+    }
+
+
+
+    [class$="cards__card"],
+    [class$="cards__item"],
+    [class$="left-card"],
+    .deposit__inner__points__item,
+    .bonuses__inner__cards-headers,
+    .deposit__history__cards__headers,
+    .main__category__inner__right-card a,
+    .main__latestPay__cards-card a,
+    .main__phonePay__number,
+    .main__phonePay__number__input__phone input,
+    .deposit__inner__points__item-input,
+    .main__search__input,
+    .main__search__input input,
+    .main__search__input button {
+        background: #4B4C4D !important;
+    }
+
+    .main__plans-left span {
+        color: #333 !important;
+    }
+
+    .mainPayment__inner__input {
+        border: none;
+    }
+
+    [class$="__inner__top-btn"] {
+        color: #333 !important;
+    }
+
+    .main__category__inner__right-card img,
+    .main__plans-left img,
+    .deposit__inner__cards__item button img,
+    .bonuses__inner__cards__item-service img,
+    .main__latestPay__cards-card img,
+    .deposit__inner__points__item-btns button:last-child img,
+    .mainPayment__inner-logo img {
+        filter: invert(0);
+    }
+
+    .main__category__inner__left-card:hover {
+        background: var(--color-main) !important;
+
+        .main__category__inner__left-card-left {
+            & span {
+                color: #333 !important;
+            }
+
+            & img {
+                filter: invert(0);
+            }
+        }
+
+        & img {
+            filter: invert(0);
+        }
+    }
+
+    .mainPayment__inner {
+        &__input__btns button:hover {
+            color: #333 !important;
+        }
+
+        &__sum__btns button:hover {
+            color: #333 !important;
+        }
+    }
+
+    .staffModal,
+    .pointsModal {
+        &-btn img {
+            filter: invert(1);
+        }
+
+        &__inner {
+            &-input {
+
+                & span,
+                & input {
+                    color: white !important;
+                }
+            }
+
+            &__btns {
+                & button:last-child {
+                    color: #333 !important;
+                }
+            }
+        }
+    }
+
+    .sidebar__socials__list-item,
+    .sidebar__support__item-img {
+        img {
+            filter: brightness(0.8) invert(1);
+        }
+    }
+
+}

@@ -47,11 +47,11 @@
     &::after {
       content: '';
       position: absolute;
-      top: 40px;
+      top: 49px;
       left: 0;
       height: 2px;
       width: 100%;
-      background: var(--color-bg-extra);
+      background: var(--color-after);
   }
 
     // before after
@@ -245,6 +245,7 @@
           font-style: normal;
           font-weight: 500;
           line-height: normal;
+          color: var(--color-text);
         }
       }
     }

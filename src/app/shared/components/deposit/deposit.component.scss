@@ -43,11 +43,11 @@
         &::after {
             content: '';
             position: absolute;
-            top: 36px;
+            top: 49px;
             left: 0;
             height: 2px;
             width: 100%;
-            background: var(--color-bg-extra);
+            background: var(--color-after);
         }
     }
 
@@ -71,8 +71,7 @@
             border-radius: 32px;
             transition: 150ms;
 
-            &.active,
-            &:hover {
+            &.active {
                 background: var(--color-main);
             }
 

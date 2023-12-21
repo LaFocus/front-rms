@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { Sidebar } from "../layout/sidebar/sidebar.component";
 import { NgForOf } from "@angular/common";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-main-layout",
   templateUrl: "./main.component.html",
   styleUrls: ["./main.component.scss"],
   standalone: true,
-  imports: [Sidebar, NgForOf],
+  imports: [Sidebar, NgForOf, RouterLink],
 })
 export class MainComponent implements OnInit {
   categories: any[] = [

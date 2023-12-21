@@ -9,6 +9,25 @@
 
 body {
     padding-right: 24px;
+    background: var(--color-bg-main);
 }
+
+aside, input {
+    background: var(--color-bg-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    color: var(--color-text)
+}
+
+
+
 
 @import "src/assets/styles/main";
