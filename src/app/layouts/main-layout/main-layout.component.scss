@@ -17,7 +17,7 @@
   }
 
   &__nav {
-    
+
     &__list {
       display: flex;
       align-items: center;
@@ -38,10 +38,6 @@
           font-weight: 400;
           line-height: normal;
           color: var(--color-text);
-          
-          @media screen and (max-width: 1310px) {
-            font-size: 14px;
-          }
         }
 
         & img {
@@ -55,14 +51,26 @@
         }
       }
 
+    }
 
+    &__onPhones {
+      width: 690px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      &-burger {
+        position: absolute;
+        top: 19px;
+        left: 16px;
+      }
     }
   }
 }
 
 .mainWrapper {
   display: grid;
-  grid-template-columns: 331px auto 307px;
+  grid-template-columns: 331px auto;
   column-gap: 24px;
 
   &-routes {

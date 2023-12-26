@@ -2,7 +2,13 @@
     <div class="sidebar__controls">
         <button class="sidebar__controls-btn">O'zb</button>
         <button class="sidebar__controls-btn" (click)="modeToggle()">
-            Switch
+            <label class="switch">
+                <input type="checkbox" [(ngModel)]="!isDarkMode" />
+                <span class="slider">
+                    <span class="slider-img"></span>
+                </span>
+            </label>
+            <!-- switch -->
         </button>
         <button class="sidebar__controls-btn">
             <img src="../../../../../assets/images/Settings.svg" alt="">
@@ -15,6 +21,9 @@
                 <img src="../../../../../assets/images/exit/exit1.svg" alt="">
                 <img src="../../../../../assets/images/exit/exit2.svg" alt="">
             </div>
+        </button>
+        <button class="sidebar__controls-btn sidebar__controls-btn-close" (click)="closeModal()" *ngIf="isWindowSmall">
+            <img src="../../../../../assets/images/decline.svg" alt="">
         </button>
     </div>
     <profile-info></profile-info>

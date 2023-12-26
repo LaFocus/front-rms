@@ -19,7 +19,8 @@ import { ProfileInfo } from "../../shared/components/layout/profile-info/profile
   ],
 })
 export class AppMainLayout implements OnInit {
-  constructor() {}
+  isBurgerActive: boolean = false;
+  isWindowSmall: boolean = window.innerWidth <= 1300;
 
   headerNav: any[] = [
     {
@@ -48,6 +49,26 @@ export class AppMainLayout implements OnInit {
       icon: "../../../assets/images/Staff.svg",
     },
   ];
+
+  showSidebar() {
+    this.isBurgerActive = !this.isBurgerActive;
+
+    if (this.isBurgerActive) document.body.classList.add("stopSCroll");
+    else document.body.classList.remove("stopSCroll");
+  }
+
+  changeSideBarPos(): any {
+    if (this.isWindowSmall) {
+      if (this.isBurgerActive) {
+        return "translateX(0)";
+      }else return "translateX(-100%)"
+    }
+  }
+
   ngOnInit() {
+    window.addEventListener("click", () => {
+      this.isBurgerActive = false;
+      document.body.classList.remove("stopSCroll");
+    });
   }
 }

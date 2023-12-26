@@ -7,19 +7,24 @@
   <nav class="header__nav">
     <ul class="header__nav__list">
       <li *ngFor="let item of headerNav">
-        <a href="" class="header__nav__list-item" [routerLink]="item.path" routerLinkActive="active" >
+        <a href="" class="header__nav__list-item" [routerLink]="item.path" routerLinkActive="active" (click)="isBurgerActive = false" >
           <img [src]="item.icon" alt="">
           <span>{{ item.title }}</span>
         </a>
       </li>
     </ul>
+
+    <div class="header__nav__onPhones">
+      <img class="header__nav__onPhones-burger" src="../../../assets/images/burger.svg" alt="" (click)="showSidebar(); $event.stopPropagation()">
+      <img class="header__nav__onPhones-logo" src="../../../assets/images/lightLogo.svg" alt="" (click)="showSidebar(); $event.stopPropagation()">
+    </div>
   </nav>
 </header>
 
 <main class="mainWrapper">
-  <app-sidebar></app-sidebar>
+  <app-sidebar class="mainWrapper-sidebar" [style.transform]="changeSideBarPos()" (click)="$event.stopPropagation()" (buttonClick)="showSidebar()"></app-sidebar>
   <router-outlet class="mainWrapper-routes"></router-outlet>
-  <aside class="mainWrapper__aside">
+  <!-- <aside class="mainWrapper__aside">
     <profile-info></profile-info>
-  </aside>
+  </aside> -->
 </main>

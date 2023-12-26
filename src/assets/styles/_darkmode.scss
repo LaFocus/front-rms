@@ -49,7 +49,8 @@ html.dark {
     .deposit__inner__points__item-btns button:last-child img,
     .mainPayment__inner-logo img,
     .header__logo img:first-child,
-    .header__nav__list-item.active img {
+    .header__nav__list-item.active img,
+    .slider img {
         filter: invert(0);
     }
 
@@ -109,3 +110,4 @@ html.dark {
         }
     }
 }
+
