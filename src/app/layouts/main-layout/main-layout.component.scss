@@ -54,10 +54,11 @@
     }
 
     &__onPhones {
-      width: 690px;
+      width: 100vw;
       display: none;
       align-items: center;
       justify-content: center;
+      // transform: translateX(-20px);
 
       &-burger {
         position: absolute;

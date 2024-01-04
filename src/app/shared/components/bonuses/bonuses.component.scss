@@ -5,7 +5,7 @@
     height: 100%;
     margin-top: 82px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column;
 
     &__inner {
@@ -18,12 +18,13 @@
         justify-content: space-between;
         position: relative;
         margin-bottom: 38px;
-        width: 100%;
+        width: 690px;
 
         &-backBtn {
             border: none;
             background: none;
             cursor: pointer;
+            position: absolute;
         }
 
         & img {

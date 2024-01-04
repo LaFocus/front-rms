@@ -15,23 +15,28 @@
 
     .header {
         background: var(--color-bg-accent) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: baseline !important;
 
         &__logo {
             display: none !important;
         }
 
         &__nav {
+            max-width: 690px !important;
 
             &__list {
-
-                @media screen and (max-width: 1300px) {
-                    display: none !important;
-                }
+                display: none !important;
             }
 
             &__onPhones {
                 display: flex !important;
             }
+
+            // &__onPhones {
+            //     width: 92vw !important;
+            // }
 
         }
     }
@@ -84,5 +89,58 @@
         top: 0 !important;
         width: auto !important;
         height: 100vh;
+        overflow-y: scroll;
     }
+
+    .main__inner{
+        align-items: center !important;
+    }
+    .points__inner{
+        align-items: center !important;
+    }
+    .staff__inner{
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .deposit {
+        align-items: center !important;
+
+    }
+
+    .bonuses {
+        align-items: center !important;
+
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    .header {
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .main {
+        &__category {
+
+            &__inner { 
+                grid-template-columns: 1fr !important;
+
+                &__right {
+                    display: none !important;
+                }
+
+                &__left {
+
+                    &-card {
+                        width: calc(100% - 17px) !important;
+                    }
+                }
+            }
+        }
+    }
+
 }

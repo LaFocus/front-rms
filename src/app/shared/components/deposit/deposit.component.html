@@ -7,13 +7,15 @@
         </button>
         <h2>Финансы</h2>
     </div>
-    <div class="deposit__switch">
-        <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'main'}" routerLinkActive="active">
-            Управление
-        </a>
-        <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'history'}" routerLinkActive="active">
-            История
-        </a>
+    <div class="deposit__switch__container">
+        <div class="deposit__switch">
+            <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'main'}" routerLinkActive="active">
+                Управление
+            </a>
+            <a [routerLink]="['/deposit']" [queryParams]="{ overview: 'history'}" routerLinkActive="active">
+                История
+            </a>
+        </div>
     </div>
     <div class="router-container">
         <router-outlet></router-outlet>
