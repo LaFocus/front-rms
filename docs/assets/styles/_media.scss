@@ -1,0 +1,146 @@
+@media screen and (max-width: 1300px) {
+    .mainWrapper {
+        grid-template-columns: auto !important;
+
+        &-sidebar {
+            transform: translateX(-100%);
+            transition: 150ms;
+            z-index: 100;
+
+            &.active {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .header {
+        background: var(--color-bg-accent) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: baseline !important;
+
+        &__logo {
+            display: none !important;
+        }
+
+        &__nav {
+            max-width: 690px !important;
+
+            &__list {
+                display: none !important;
+            }
+
+            &__onPhones {
+                display: flex !important;
+            }
+
+            // &__onPhones {
+            //     width: 92vw !important;
+            // }
+
+        }
+    }
+
+    .main {
+        margin-top: 66px !important;
+
+        &__container {
+            padding: 0 !important;
+        }
+
+        &__pay {
+            display: none !important;
+        }
+
+        &__inner {
+            width: 100%;
+        }
+
+        &__latestPay {
+            order: -1;
+            margin-bottom: -24px;
+        }
+
+        &__search {
+
+            &__input {
+                display: none !important;
+            }
+        }
+    }
+
+    .deposit,
+    .bonuses,
+    .points,
+    .staff {
+        margin-top: 66px !important;
+
+        &__top {
+            display: none !important;
+        }
+    }
+
+    body {
+        padding-right: 0;
+    }
+
+    .sidebar {
+        padding-right: 20px !important;
+        top: 0 !important;
+        width: auto !important;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .main__inner{
+        align-items: center !important;
+    }
+    .points__inner{
+        align-items: center !important;
+    }
+    .staff__inner{
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .deposit {
+        align-items: center !important;
+
+    }
+
+    .bonuses {
+        align-items: center !important;
+
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    .header {
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .main {
+        &__category {
+
+            &__inner { 
+                grid-template-columns: 1fr !important;
+
+                &__right {
+                    display: none !important;
+                }
+
+                &__left {
+
+                    &-card {
+                        width: calc(100% - 17px) !important;
+                    }
+                }
+            }
+        }
+    }
+
+}
